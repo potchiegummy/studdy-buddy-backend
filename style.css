@@ -1,0 +1,112 @@
+/* style.css */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+}
+
+.app {
+  width: 400px;
+  max-width: 90%;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.title-bar {
+  font-family: 'Orbitron', sans-serif;
+  color: #00f0ff;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.chat-box {
+  flex: 1;
+  background: rgba(0,0,0,0.2);
+  margin: 10px 0;
+  border-radius: 15px;
+  padding: 10px;
+  overflow-y: auto;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.3);
+}
+
+.message {
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 80%;
+  animation: fadeIn 0.3s;
+}
+
+.user {
+  background: #00f0ff;
+  color: #000;
+  align-self: flex-end;
+}
+
+.bot {
+  background: #9b00ff;
+  color: #fff;
+  align-self: flex-start;
+}
+
+.input-area {
+  display: flex;
+}
+
+input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 20px;
+  border: none;
+  background: #00f0ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00c8d4;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* style.css (add this at the end) */
+
+/* Simple pulsing effect for the typing indicator */
+.typing-indicator {
+  opacity: 0.5;
+  animation: pulse 1.5s infinite;
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
